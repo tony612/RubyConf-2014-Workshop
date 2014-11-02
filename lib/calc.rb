@@ -3,7 +3,7 @@ module Calc
     string = string.gsub(/\s+/, '')
     if string =~ /\A\d+\z/
       string.to_i
-    elsif string =~ /\A(\d+\D?\d+)(.*)\z/
+    elsif string =~ /\A(\d+\D\d+)(.*)\z/
       result = eval_unit($1)
       if $2 == ''
         result
