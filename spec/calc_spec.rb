@@ -46,7 +46,16 @@ describe 'calc' do
   it "hanlde multi numbers" do
     expect(Calc.eval("1+1+1")).to be_eql 3
     expect(Calc.eval("1+1+1+1")).to be_eql 4
+    expect(Calc.eval("1-2-1-1")).to be_eql 0
     expect(Calc.eval("3*2*2")).to be_eql 12
     expect(Calc.eval("3*2*2*2")).to be_eql 24
+  end
+
+  it "hanlde multi numbers" do
+    expect(Calc.eval("1+1-1")).to be_eql 1
+    expect(Calc.eval("1+1-1-1")).to be_eql 0
+    expect(Calc.eval("1-2+1+1")).to be_eql 2
+    expect(Calc.eval("3/2*2")).to be_eql 2
+    expect(Calc.eval("3*2/2*2")).to be_eql 6
   end
 end
