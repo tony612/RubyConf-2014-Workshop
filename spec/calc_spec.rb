@@ -25,4 +25,11 @@ describe 'calc' do
     expect(Calc.eval('2*1')).to be_eql 2
     expect(Calc.eval('2 * 1')).to be_eql 2
   end
+
+  it "should eval devide" do
+    expect(Calc.eval('4/2')).to be_eql 2
+    expect(Calc.eval('4 / 2')).to be_eql 2
+    expect(Calc.eval('4/3')).to be_eql 1
+    expect(Calc.eval('4 / 3')).to be_eql 1
+  end
 end
